@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'layout.html'%}
+{% load static %}
+    {% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to AuraSpeed</h1>
+    </header>
+    <nav>
+        <ul>
+            
+            <li><a href="{% url 'catalog' %}">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Featured Product</h2>
+            <p>This is a sample product description.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AuraSpeed. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+{% endblock %}

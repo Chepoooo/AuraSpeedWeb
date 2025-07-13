@@ -1,0 +1,91 @@
+
+
+.custom-navbar {
+    background-color: #111 !important; /* Negro más intenso */
+    border-bottom: 1px solid #333;
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand, 
+.navbar-nav .nav-link {
+    color: #f8f9fa !important;
+    padding: 0.5rem 1rem;
+}
+
+/* Efecto hover para los items */
+.navbar-brand:hover, 
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Estilo especial para el botón HOME */
+.home-btn {
+    color: #00cec9 !important; /* Color de acento */
+    font-weight: 600;
+}
+
+/* Estilo para el botón de Github */
+.github-btn {
+    background-color: #333 !important;
+    color: white !important;
+    border: 1px solid #444;
+    border-radius: 6px !important;
+    padding: 0.4rem 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.github-btn:hover {
+    background-color: #444 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el botón de Blogs */
+.blogs-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.blogs-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00cec9;
+    transition: width 0.3s ease;
+}
+
+.blogs-btn:hover::after {
+    width: 100%;
+}
+
+/* Estilo para el botón toggler en móviles */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ajustes para móviles */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 1rem;
+        background-color: #1a1a1a;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+    
+    .github-btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+}
