@@ -1,0 +1,65 @@
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --red-dark: #8B0000;
+    --red-accent: #C00000;
+    --gray-dark: #1A1A1A;
+}
+
+/* Estilos para el logo AURA/SPEED */
+.aura {
+    color: var(--white);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.speed {
+    color: var(--red-dark);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.logo-footer .aura {
+    color: var(--white);
+}
+
+.logo-footer .speed {
+    color: var(--red-dark);
+}
+
+/* Efectos hover para los nav-links */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--red-accent);
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--red-accent);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón Instagram personalizado */
+.btn-outline-danger {
+    color: var(--red-dark);
+    border-color: var(--red-dark);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--red-dark);
+    color: var(--white);
+}

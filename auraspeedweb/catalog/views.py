@@ -13,3 +13,6 @@ def catalog(request):
         'products_by_category': products_by_category
     }
     return render(request, 'catalog.html', context)
+  
+def contact(request):
+  return render(request,'contact.html')
