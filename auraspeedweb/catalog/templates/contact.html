@@ -1,1 +1,144 @@
-contactttttttttttttttttt
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Contacto | AuraSpeed{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h1 class="aura">CONTACTA CON <span class="speed">AURASPEED</span></h1>
+                <p class="text-muted">Estamos aquí para ayudarte. Elige tu medio preferido para comunicarte con nosotros.</p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="row justify-content-center">
+                <!-- WhatsApp Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card bg-black border-danger h-100 contact-card">
+                        <div class="card-body text-center p-4">
+                            <div class="contact-icon mb-3">
+                                <i class="bi bi-whatsapp text-success" style="font-size: 4rem;"></i>
+                            </div>
+                            <h3 class="text-white mb-3">WhatsApp</h3>
+                            <p class="text-white-50">
+                                Chatea directamente con nosotros! Resolución rápida de consultas.
+                            </p>
+                            <a href="https://wa.me/1234567890?text=Hola!%20Tengo%20una%20consulta%20sobre%20sus%20productos" 
+                               target="_blank" 
+                               class="btn btn-success btn-lg w-100">
+                                <i class="bi bi-whatsapp me-2"></i> Contactar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card bg-black border-danger h-100 contact-card">
+                        <div class="card-body text-center p-4">
+                            <div class="contact-icon mb-3">
+                                <i class="bi bi-instagram text-danger" style="font-size: 4rem;"></i>
+                            </div>
+                            <h3 class="text-white mb-3">Instagram</h3>
+                            <p class="text-white-50">
+                                Síguenos y envíanos un mensaje directo! Te responderemos pronto.
+                            </p>
+                            <a href="https://www.instagram.com/auraspeed_ca/direct/inbox/" 
+                               target="_blank" 
+                               class="btn btn-outline-danger btn-lg w-100">
+                                <i class="bi bi-instagram me-2"></i> Contactar por Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="text-center mt-5">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="info-item">
+                            <i class="bi bi-clock text-danger" style="font-size: 2rem;"></i>
+                            <h5 class="text-white mt-2">Horario de Atención</h5>
+                            <p class="text-white-50 mb-0">Lunes a Viernes: 9am - 6pm</p>
+                            <p class="text-white-50">Sábados: todo el dia!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="info-item">
+                            <i class="bi bi-lightning-charge text-danger" style="font-size: 2rem;"></i>
+                            <h5 class="text-white mt-2">Respuesta Rápida</h5>
+                            <p class="text-white-50">Te respondemos en un instante!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="info-item">
+                            <i class="bi bi-headset text-danger" style="font-size: 2rem;"></i>
+                            <h5 class="text-white mt-2">Soporte Técnico</h5>
+                            <p class="text-white-50">Asesoramiento especializado en productos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .contact-card {
+        transition: all 0.3s ease;
+        border: 2px solid #8B0000;
+    }
+    
+    .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+        border-color: #C00000;
+    }
+    
+    .contact-icon {
+        transition: transform 0.3s ease;
+    }
+    
+    .contact-card:hover .contact-icon {
+        transform: scale(1.1);
+    }
+    
+    .info-item {
+        padding: 1.5rem;
+        border: 1px solid #333;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .info-item:hover {
+        border-color: #8B0000;
+        transform: translateY(-5px);
+    }
+    
+    .btn-success {
+        background-color: #25D366;
+        border-color: #25D366;
+    }
+    
+    .btn-success:hover {
+        background-color: #128C7E;
+        border-color: #128C7E;
+    }
+    
+    .aura {
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+    }
+    
+    .speed {
+        color: #8B0000;
+        font-family: 'Orbitron', sans-serif;
+    }
+</style>
+{% endblock %}
