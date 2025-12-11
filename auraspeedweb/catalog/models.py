@@ -19,3 +19,33 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name
+    
+
+
+class ContactLink(models.Model):
+    PLATFORM_CHOICES = [
+        ('whatsapp', 'WhatsApp'),
+        ('instagram', 'Instagram'),
+        ('email', 'Email'),
+        ('phone', 'Teléfono'),
+        ('website', 'Sitio Web'),
+    ]
+    
+    platform = models.CharField(
+        max_length=20, 
+        choices=PLATFORM_CHOICES,
+        unique=True
+    )
+    url = models.URLField(max_length=500)
+    display_text = models.CharField(max_length=100, blank=True)
+    icon_class = models.CharField(max_length=50, default='bi bi-link')
+    is_active = models.BooleanField(default=True)
+    order = models.IntegerField(default=0)
+    
+    class Meta:
+        ordering = ['order', 'platform']
+        verbose_name = 'Enlace de Contacto'
+        verbose_name_plural = 'Enlaces de Contacto'
+    
+    def __str__(self):
+        return f"{self.get_platform_display()}: {self.url}"
